@@ -37,7 +37,7 @@ Our reporting framework is designed to help you present your findings in a clear
 - Focus on insights and recommendations, rather than tedious data gathering and formatting
 
 
-Get Started Today
+## Get Started Today
 
 
 Explore our repository and start creating comprehensive equity research reports with confidence. Our tools and scripts are designed to save you time, simplify your workflow, and help you deliver high-quality research reports that inform and engage your audience.
