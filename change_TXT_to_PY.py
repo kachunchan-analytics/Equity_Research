@@ -5,6 +5,8 @@ root_dir = os.getcwd()
 for root, dirs, files in os.walk(root_dir):
     if '.git' in dirs:
         dirs.remove('.git')
+    if 'SEC_company_facts' in dirs:
+        dirs.remove('SEC_company_facts')
     for file in files:
         if file.endswith(".txt"):
             new_file_name = file.replace(".txt", ".py")
