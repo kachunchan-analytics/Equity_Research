@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[22]:
+# In[4]:
 
 
 import pandas as pd
@@ -34,7 +34,10 @@ df = pd.DataFrame(columns=['facts', 'count'])
 
 # Iterate over the JSON data and update the DataFrame
 for i in stocks_json_files:
-    key_list = i['facts']['us-gaap'].keys()
+    try:
+        key_list = i['facts']['us-gaap'].keys()
+    except:
+        key_list = i['facts']['ifrs-full'].keys()
     for j in key_list:
         if j not in df['facts'].values:
             df.loc[len(df)] = [j, 1]  # add fact to the column and set count to 1
@@ -43,5 +46,11 @@ for i in stocks_json_files:
             df.at[idx, 'count'] += 1  # increment the count for the existing fact
 
 df.to_excel('./glossary/glossary.xlsx', sheet_name='Glossary', index=False)
+
+
+
+# In[ ]:
+
+
 
 
