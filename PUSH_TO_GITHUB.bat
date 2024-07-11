@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\Andy\Desktop\python_work_github\Equity_Research_Tools\Equity_Research_Tools"
+cd /d "C:\Users\Andy\Desktop\python_work_github\Equity_Research_Tools_GITHUB\Equity_Research_Tools"
 rem cd /d %cd%
 python change_TXT_to_PY.py
 git add . 
